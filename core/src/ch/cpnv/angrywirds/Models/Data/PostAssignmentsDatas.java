@@ -4,10 +4,10 @@ public class PostAssignmentsDatas {
 
     public int assignment_id;
     public String token;
-    public String result;
+    public int result;
 
     //To send value to backend
-    public PostAssignmentsDatas(int assignment_id, String result, String token){
+    public PostAssignmentsDatas(int assignment_id, int result, String token){
         this.assignment_id = assignment_id;
         this.token = token;
         this.result = result;

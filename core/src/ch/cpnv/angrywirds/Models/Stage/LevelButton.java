@@ -22,10 +22,10 @@ public class LevelButton {
     private Sprite sprite;
     private BitmapFont font;
     private int lvlid;
-    private String result;
+    private int result;
 
     //Generate button for the choice page
-    public LevelButton(float x, float y, String message, int lvlid, String result) {
+    public LevelButton(float x, float y, String message, int lvlid, int result) {
         this.result = result;
         this.message = message;
         sprite = new Sprite(new Texture(PICNAME));
@@ -42,7 +42,7 @@ public class LevelButton {
         font.draw(batch, message, sprite.getX()+TEXT_OFFSET_X, sprite.getY()+TEXT_OFFSET_Y+50);
 
         //Check if the user has a high score
-        if (result == "null"){
+        if (result == 0){
             font.draw(batch, NORESULT, sprite.getX()+TEXT_OFFSET_X, sprite.getY()+TEXT_OFFSET_Y);
         }else {
             font.draw(batch, "Meilleur score : "+result, sprite.getX()+TEXT_OFFSET_X, sprite.getY()+TEXT_OFFSET_Y);
@@ -58,11 +58,11 @@ public class LevelButton {
         return lvlid;
     }
 
-    public String getResult() {
+    public int getResult() {
         return result;
     }
 
-    public void setResult(String result) {
+    public void setResult(int result) {
         this.result = result;
     }
 }

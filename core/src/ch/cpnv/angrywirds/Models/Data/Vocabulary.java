@@ -13,7 +13,7 @@ public class Vocabulary {
     String vocName;
     int langprof;
     int langeleve;
-    String result;
+    int result;
     ArrayList<Word> words;
 
     public Vocabulary(int id, String vocName, int langprof, int langeleve){
@@ -41,7 +41,7 @@ public class Vocabulary {
         return vocName;
     }
 
-    public String getResult() {
+    public int getResult() {
         return result;
     }
 }

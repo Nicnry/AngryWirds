@@ -22,7 +22,6 @@ public abstract class VocProvider {
 
     public enum Status { unknown, ready, cancelled, nocnx }
     public static Status status = Status.unknown;
-    public String tutu;
 
     public static ArrayList<Language> languages;
     public static ArrayList<Vocabulary> vocabularies;
@@ -32,7 +31,7 @@ public abstract class VocProvider {
         vocabularies = new ArrayList<Vocabulary>();
 
         /*
-        Get my vocs homework
+        Get my vocs homework (point 1)
          */
         HttpRequestBuilder requestLangues = new HttpRequestBuilder();
         Net.HttpRequest httpRequestLangues = requestLangues.newRequest().method(Net.HttpMethods.GET).url(API+"assignments/*EFF7485DF3BCDAFA547DD4DAF868450C3FEC383F").build();
@@ -100,7 +99,7 @@ public abstract class VocProvider {
 
 
     //Send data to my homework
-    static public void submitResults (int assignment_id, String result, String token) {
+    static public void submitResults (int assignment_id, int result, String token) {
         Gdx.app.log("AJAXPOST", "Appel ajax demandé");
         HttpRequestBuilder requestSubmitResults = new HttpRequestBuilder();
         PostAssignmentsDatas datas = new PostAssignmentsDatas(assignment_id, result, token);

@@ -22,7 +22,7 @@ public class GameOver extends GameActivity {
         background = new Texture(Gdx.files.internal("background.png"));
 
         this.title = title;
-        VocProvider.submitResults(34,"1","*EFF7485DF3BCDAFA547DD4DAF868450C3FEC383F");
+        VocProvider.submitResults(34, ScoreBoard.score,"*EFF7485DF3BCDAFA547DD4DAF868450C3FEC383F");
     }
 
 
